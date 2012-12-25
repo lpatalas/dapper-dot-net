@@ -410,6 +410,12 @@ namespace Dapper
             typeMap[typeof(Object)] = DbType.Object;
         }
 
+        /// <summary>
+        ///   Adds custom entry to type map.
+        ///   If entry for specified CLR type already exists it's overwritten.
+        /// </summary>
+        /// <param name="type">CLR type.</param>
+        /// <param name="dbType">Data provider type.</param>
         public static void AddTypeMap(Type type, DbType dbType)
         {
             typeMap[type] = dbType;
